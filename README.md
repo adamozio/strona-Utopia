@@ -64,7 +64,7 @@ npm install
 node server.js
 ```
 
-Serwer startuje na porcie **80**.
+Serwer startuje na porcie **3000**.
 
 ## Endpoints API
 
