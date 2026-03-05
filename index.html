@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Utopia</title>
+    <link rel="icon" href="image_1.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar" style="display: none;">
+        <div class="nav-container">
+            <a href="#" class="logo-link" onclick="showMainPage()">
+                <img src="image_1.png" alt="Utopia Logo" class="nav-logo">
+            </a>
+            
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#" onclick="showMainPage()">Strona Główna</a></li>
+                <li><a href="#about" onclick="showMainPage()">O Nas</a></li>
+                <li><a href="#faq" onclick="showMainPage()">FAQ</a></li>
+                <li><a href="#" onclick="showWhitelistPage()">Whitelist</a></li>
+                <li><a href="#" onclick="showRulesPage()" class="highlight-link">Regulamin</a></li>
+                <li><a href="https://discord.gg/4T2aWZ9n4h" target="_blank" class="btn-discord-nav"><i class="fab fa-discord"></i> Discord</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="landing-view">
+        <div class="split-half left-half" onclick="showWhitelistPage()">
+            <div class="split-content">
+                <p class="split-subtitle">INTERESUJE MNIE</p>
+                <h1 class="split-title">Whitelista</h1>
+                <div class="split-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <button class="split-btn">Złóż Podanie</button>
+            </div>
+        </div>
+        <div class="split-half right-half" onclick="showMainPage()">
+            <div class="split-content">
+                <p class="split-subtitle">INTERESUJE MNIE</p>
+                <h1 class="split-title">Strona</h1>
+                <div class="split-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <button class="split-btn">Przejdź do strony</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-view" style="display: none;">
+        
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <img src="image_1.png" alt="Project Utopia" class="hero-big-logo">
+                <p class="hero-subtitle">Nowa definicja Roleplayu.</p>
+                <div class="buttons">
+                    <a href="https://discord.gg/4T2aWZ9n4h" target="_blank" class="btn-main">
+                        <i class="fab fa-discord"></i> Dołącz do gry
+                    </a>
+                    <a href="#about" class="btn-secondary">
+                        Poznaj nas <i class="fas fa-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="about-wrapper">
+                    <div class="about-text">
+                        <h2>O Projekcie <span class="highlight">Utopia</span></h2>
+                        <p>Project Utopia to serwer stworzony z myślą o graczach, którzy szukają czegoś więcej niż zwykłego "strzelania". Naszym celem jest odwzorowanie realistycznego życia w Los Santos.</p>
+                        <ul class="about-list">
+                            <li><i class="fas fa-check-circle"></i> Autorskie rozwiązania</li>
+                            <li><i class="fas fa-check-circle"></i> Aktywna administracja</li>
+                            <li><i class="fas fa-check-circle"></i> Ekonomia Hard</li>
+                        </ul>
+                    </div>
+                    <div class="about-image-container">
+                        <img src="o_nas.png" alt="O Nas - Screenshot">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Często Zadawane Pytania</h2>
+                    <p>Wszystko, co musisz wiedzieć, zanim zaczniesz grać na Project Utopia.</p>
+                </div>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Jak dołączyć do serwera?</h3>
+                            <div class="icon-container"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-content">Wejdź na nasz Discord, zaakceptuj regulamin i pobierz paczkę serwerową łącząc się przez listę serwerów FiveM lub wpisując w F8: <code>connect PUtopia.pl</code></div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Czy muszę posiadać whitelistę, aby grać?</h3>
+                            <div class="icon-container"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-content">Tak, wymagane jest złożenie podania. Wystarczy, że w menu strony wybierzesz zakładkę "Whitelist", zalogujesz się przez Discord i wypełnisz krótki formularz. Administracja sprawdzi Twoje odpowiedzi!</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Ile muszę mieć lat, by móc grać na serwerze?</h3>
+                            <div class="icon-container"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-content">Wymagane jest ukończenie 16 roku życia, mutacja głosu oraz zachowanie odpowiedniego poziomu kultury osobistej.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Gdzie znajdę regulamin serwera?</h3>
+                            <div class="icon-container"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-content">Pełny regulamin dostępny jest pod przyciskiem "Regulamin" w menu.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Czy mogę zgłosić własne pomysły na rozwój serwera?</h3>
+                            <div class="icon-container"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-content">Oczywiście! Cenimy zdanie społeczności. Propozycje możesz zgłaszać na kanale #propozycje na Discordzie.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Co zrobić, jeśli napotkam problem techniczny lub błąd w grze?</h3>
+                            <div class="icon-container"><i class="fas fa-chevron-down"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <div class="faq-content">Załóż ticket na Discordzie. Nasza administracja techniczna postara się jak najszybciej pomóc.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container footer-content">
+                <img src="image_1.png" alt="Utopia Logo" class="footer-logo">
+                <p>&copy; 2026 Project Utopia. Wszelkie prawa zastrzeżone.</p>
+                <div class="socials">
+                    <a href="https://discord.gg/4T2aWZ9n4h" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a href="https://www.youtube.com/channel/UCytTtwy-zYotfmjOZnKxKiA/posts?pvf=CAI%253D" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </footer>
+
+    </div> 
+    
+    <div id="rules-view" style="display: none;">
+        
+        <div class="rules-top-bar">
+            <div class="container nav-flex">
+                <div class="rules-text-logo">Project Utopia</div>
+                <button onclick="showMainPage()" class="btn-close-rules">
+                    <i class="fas fa-times"></i> Zamknij
+                </button>
+            </div>
+        </div>
+
+        <div class="container" style="min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 40px 20px;">
+            
+            <i class="fas fa-tools" style="font-size: 4rem; color: var(--primary); margin-bottom: 25px; animation: pulse 2s infinite;"></i>
+            <h2 style="font-size: 2.5rem; color: var(--text-white); margin-bottom: 15px;">Wkrótce</h2>
+            <p style="color: var(--text-gray); font-size: 1.1rem; max-width: 600px; line-height: 1.6;">
+                Nasz regulamin jest obecnie w trakcie gruntownej przebudowy, aby zapewnić jeszcze lepszą jakość rozgrywki.
+                <br>Nowa wersja pojawi się tutaj już niebawem!
+            </p>
+            <div style="margin-top: 40px;">
+                <button onclick="showMainPage()" class="btn-main">
+                    Wróć na stronę główną
+                </button>
+            </div>
+
+            <style>
+                @keyframes pulse {
+                    0% { transform: scale(1); opacity: 1; }
+                    50% { transform: scale(1.1); opacity: 0.8; }
+                    100% { transform: scale(1); opacity: 1; }
+                }
+            </style>
+        </div>
+        
+        <footer style="position: absolute; bottom: 0; width: 100%;">
+            <div class="container footer-content">
+                <p>&copy; 2026 Project Utopia. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </footer>
+    </div>
+
+    <div id="whitelist-view" style="display: none; padding-top: 100px;">
+        <div class="container">
+            
+            <div id="wl-unauthenticated" style="display: none; text-align: center; padding: 60px 20px; background: var(--bg-card); border-radius: 10px; border: 1px solid rgba(255,255,255,0.05); max-width: 600px; margin: 0 auto;">
+                <i class="fab fa-discord" style="font-size: 5rem; color: #5865F2; margin-bottom: 20px;"></i>
+                <h2 style="font-size: 2rem; margin-bottom: 15px;">Wymagane Logowanie</h2>
+                <p style="color: var(--text-gray); margin-bottom: 30px;">Aby złożyć podanie lub sprawdzić jego status, musisz połączyć konto Discord.</p>
+                <a href="/auth/discord" class="btn-discord-login"><i class="fab fa-discord"></i> Zaloguj się przez Discord</a>
+            </div>
+
+            <div id="wl-status-norole" style="display: none; text-align: center; padding: 60px 20px; background: var(--bg-card); border-radius: 10px; border: 1px solid rgba(248, 113, 113, 0.3); max-width: 600px; margin: 0 auto;">
+                <i class="fas fa-exclamation-triangle" style="font-size: 5rem; color: #f87171; margin-bottom: 20px;"></i>
+                <h2 style="font-size: 2rem; margin-bottom: 15px;">Brak uprawnień</h2>
+                <p style="color: var(--text-gray); margin-bottom: 30px;">Musisz znajdować się na naszym serwerze Discord i posiadać rangę <strong>Un-Whitelist</strong>, aby złożyć podanie!</p>
+                <a href="/logout" class="btn-logout" style="font-size: 1rem;"><i class="fas fa-sign-out-alt"></i> Wyloguj się</a>
+            </div>
+
+            <div id="wl-status-pending" style="display: none; text-align: center; padding: 60px 20px; background: var(--bg-card); border-radius: 10px; border: 1px solid rgba(234, 179, 8, 0.3); max-width: 600px; margin: 0 auto;">
+                <i class="fas fa-clock" style="font-size: 5rem; color: #eab308; margin-bottom: 20px;"></i>
+                <h2 style="font-size: 2rem; margin-bottom: 15px;">Podanie jest sprawdzane</h2>
+                <p style="color: var(--text-gray); margin-bottom: 30px;">Twoje podanie oczekuje na sprawdzenie przez administrację. Bądź cierpliwy!</p>
+                <a href="/logout" class="btn-logout" style="font-size: 1rem;"><i class="fas fa-sign-out-alt"></i> Wyloguj się</a>
+            </div>
+
+            <div id="wl-status-accepted" style="display: none; text-align: center; padding: 60px 20px; background: var(--bg-card); border-radius: 10px; border: 1px solid rgba(74, 222, 128, 0.3); max-width: 600px; margin: 0 auto;">
+                <i class="fas fa-check-circle" style="font-size: 5rem; color: #4ade80; margin-bottom: 20px;"></i>
+                <h2 style="font-size: 2rem; margin-bottom: 15px;">Jesteś na Whiteliscie!</h2>
+                <p style="color: var(--text-gray); margin-bottom: 30px;">Twoje podanie zostało zaakceptowane. Gratulacje, możesz już grać na naszym serwerze!</p>
+                <a href="/logout" class="btn-logout" style="font-size: 1rem;"><i class="fas fa-sign-out-alt"></i> Wyloguj się</a>
+            </div>
+
+            <div id="wl-status-rejected" style="display: none; text-align: center; padding: 60px 20px; background: var(--bg-card); border-radius: 10px; border: 1px solid rgba(248, 113, 113, 0.3); max-width: 600px; margin: 0 auto;">
+                <i class="fas fa-times-circle" style="font-size: 5rem; color: #f87171; margin-bottom: 20px;"></i>
+                <h2 style="font-size: 2rem; margin-bottom: 15px;">Podanie Odrzucone</h2>
+                <p style="color: var(--text-gray); margin-bottom: 10px;">Niestety, Twoje podanie nie spełniło naszych wymagań. Sprawdź wiadomość prywatną od naszego bota po szczegóły.</p>
+                <p style="color: #f87171; font-weight: bold; margin-bottom: 30px; font-size: 1.2rem;">Następna próba za: <span id="cooldown-timer"></span></p>
+                <a href="/logout" class="btn-logout" style="font-size: 1rem;"><i class="fas fa-sign-out-alt"></i> Wyloguj się</a>
+            </div>
+
+            <div id="wl-form-container" style="display: none;">
+                <div class="section-header">
+                    <h2>Podanie na <span class="highlight">Whitelistę</span></h2>
+                    <p>Zalogowano jako: <strong id="logged-user-name" style="color: #5865F2;"></strong> <a href="/logout" class="btn-logout">(Wyloguj)</a></p>
+                </div>
+                
+                <form id="wl-form" class="wl-form">
+                    <h3 class="form-section-title">Informacje OOC (O Tobie)</h3>
+                    <div class="form-group">
+                        <label>Twój Discord:</label>
+                        <input type="text" id="discord_tag" required readonly style="background: rgba(88, 101, 242, 0.1); border-color: #5865F2; cursor: not-allowed; color: #a0a0a0;">
+                    </div>
+                    <div class="form-group"><label>Ile masz lat?</label><input type="number" id="age" required min="16" max="99"></div>
+                    <div class="form-group"><label>Opisz krótko swoje doświadczenie w Roleplay:</label><textarea id="exp" rows="3" required></textarea></div>
+                    <div class="form-group"><label>Czym jest VDM i RDM? Podaj przykłady:</label><textarea id="terms" rows="3" required></textarea></div>
+
+                    <h3 class="form-section-title">Informacje IC (O Postaci)</h3>
+                    <div class="form-group"><label>Imię i Nazwisko postaci:</label><input type="text" id="char_name" required></div>
+                    <div class="form-group"><label>Wiek postaci:</label><input type="number" id="char_age" required></div>
+                    <div class="form-group"><label>Krótka historia postaci (Backstory):</label><textarea id="char_story" rows="4" required></textarea></div>
+                    <div class="form-group"><label>Jakie są cele Twojej postaci w Los Santos?</label><textarea id="char_goals" rows="3" required></textarea></div>
+                    <div class="form-group"><label>Słabe strony i lęki Twojej postaci:</label><textarea id="char_flaws" rows="3" required></textarea></div>
+                    
+                    <button type="submit" class="btn-main" style="width: 100%; margin-top: 20px;">Wyślij podanie</button>
+                </form>
+            </div>
+
+            <div id="wl-checker-panel" style="display: none; text-align: center; padding: 40px 20px; background: var(--bg-card); border-radius: 10px; border: 1px solid rgba(234, 179, 8, 0.3); max-width: 900px; margin: 0 auto;">
+                <i class="fas fa-shield-alt" style="font-size: 3rem; color: #eab308; margin-bottom: 10px;"></i>
+                <h2 style="font-size: 2rem; margin-bottom: 5px;">Panel WL Checkera</h2>
+                <p style="color: var(--text-gray); margin-bottom: 30px;">Zalogowany admin: <strong id="admin-user-name" style="color: #eab308;"></strong> <a href="/logout" class="btn-logout">(Wyloguj)</a></p>
+                <div id="apps-list" style="text-align: left;"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const navbar = document.querySelector('.navbar');
+
+        hamburger.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+
+        function hideAllViews() {
+            document.getElementById('landing-view').style.display = 'none';
+            document.getElementById('main-view').style.display = 'none';
+            document.getElementById('rules-view').style.display = 'none';
+            document.getElementById('whitelist-view').style.display = 'none';
+            navLinks.classList.remove('active');
+            window.scrollTo(0,0);
+        }
+
+        function showLandingPage() { hideAllViews(); document.getElementById('landing-view').style.display = 'flex'; navbar.style.display = 'none'; }
+        function showMainPage() { hideAllViews(); document.getElementById('main-view').style.display = 'block'; navbar.style.display = 'flex'; }
+        function showRulesPage() { hideAllViews(); document.getElementById('rules-view').style.display = 'block'; navbar.style.display = 'none'; }
+
+        let cooldownInterval;
+
+        function showWhitelistPage() {
+            hideAllViews();
+            document.getElementById('whitelist-view').style.display = 'block';
+            navbar.style.display = 'flex';
+
+            document.getElementById('wl-unauthenticated').style.display = 'none';
+            document.getElementById('wl-status-norole').style.display = 'none';
+            document.getElementById('wl-form-container').style.display = 'none';
+            document.getElementById('wl-checker-panel').style.display = 'none';
+            document.getElementById('wl-status-pending').style.display = 'none';
+            document.getElementById('wl-status-accepted').style.display = 'none';
+            document.getElementById('wl-status-rejected').style.display = 'none';
+
+            if(cooldownInterval) clearInterval(cooldownInterval);
+
+            fetch('/api/user').then(res => res.json()).then(data => {
+                if (!data.loggedIn) {
+                    document.getElementById('wl-unauthenticated').style.display = 'block';
+                } else if (data.loggedIn && data.isWLChecker) {
+                    // Admin ma zawsze dostęp do panelu
+                    document.getElementById('wl-checker-panel').style.display = 'block';
+                    document.getElementById('admin-user-name').innerText = data.username;
+                    loadApplications();
+                } else {
+                    // Sprawdzanie statusu dla Gracza
+                    if (data.appStatus === 'Oczekujące') {
+                        document.getElementById('wl-status-pending').style.display = 'block';
+                    } else if (data.appStatus === 'Zaakceptowane') {
+                        document.getElementById('wl-status-accepted').style.display = 'block';
+                    } else if (data.appStatus === 'Odrzucone') {
+                        document.getElementById('wl-status-rejected').style.display = 'block';
+                        
+                        cooldownInterval = setInterval(() => {
+                            const distance = data.cooldownUntil - new Date().getTime();
+                            if (distance < 0) {
+                                clearInterval(cooldownInterval);
+                                location.reload(); 
+                            } else {
+                                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                                document.getElementById('cooldown-timer').innerText = `${hours}h ${minutes}m ${seconds}s`;
+                            }
+                        }, 1000);
+
+                    } else {
+                        // Zanim pokażemy formularz podania, upewniamy się że gracz ma rangę Un-Whitelist!
+                        if (data.isOnServer && data.hasUnWhitelist) {
+                            document.getElementById('wl-form-container').style.display = 'block';
+                            document.getElementById('logged-user-name').innerText = data.username;
+                            document.getElementById('discord_tag').value = data.username;
+                        } else {
+                            // Brak rangi / nie ma go na serwerze!
+                            document.getElementById('wl-status-norole').style.display = 'block';
+                        }
+                    }
+                }
+            });
+        }
+
+        showLandingPage();
+
+        // FAQ Akordeon
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                if (!isActive) {
+                    item.classList.add('active');
+                    const answer = item.querySelector('.faq-answer');
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                } else {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').style.maxHeight = null;
+                }
+            });
+        });
+
+        // WYSYŁANIE PODANIA
+        document.getElementById('wl-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = {
+                age: document.getElementById('age').value,
+                exp: document.getElementById('exp').value,
+                terms: document.getElementById('terms').value,
+                charName: document.getElementById('char_name').value,
+                charAge: document.getElementById('char_age').value,
+                charStory: document.getElementById('char_story').value,
+                charGoals: document.getElementById('char_goals').value,
+                charFlaws: document.getElementById('char_flaws').value
+            };
+
+            fetch('/api/apply', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(formData)
+            }).then(res => res.json()).then(data => {
+                if(data.success) {
+                    showWhitelistPage(); 
+                }
+            });
+        });
+
+        // PANEL ADMINA
+        function loadApplications() {
+            fetch('/api/applications').then(res => res.json()).then(apps => {
+                const container = document.getElementById('apps-list');
+                container.innerHTML = '';
+                
+                const pendingApps = apps.filter(a => a.status === 'Oczekujące').reverse();
+                
+                if(pendingApps.length === 0) {
+                    container.innerHTML = '<p style="text-align:center;">Brak nowych podań do sprawdzenia!</p>';
+                    return;
+                }
+                
+                pendingApps.forEach(app => {
+                    container.innerHTML += `
+                        <div style="background: rgba(0,0,0,0.4); padding: 20px; margin-bottom: 15px; border-radius: 8px; border-left: 5px solid #eab308; border-top: 1px solid rgba(255,255,255,0.05); border-right: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                                <h3 style="margin: 0;">${app.discordTag}</h3>
+                                <small style="color: gray;">Złożono: ${app.date}</small>
+                            </div>
+                            <p style="font-size: 0.95rem; color: #d1d1d1; margin-bottom: 10px;"><strong>Postać:</strong> ${app.charName} (${app.charAge} lat) | <strong>Wiek OOC:</strong> ${app.age}</p>
+                            <div style="margin-bottom: 15px; font-size: 0.9rem; background: rgba(255,255,255,0.02); padding: 15px; border-radius: 5px;">
+                                <strong>Doświadczenie RP:</strong> ${app.exp}<br><br>
+                                <strong>Pojęcia (RDM/VDM):</strong> ${app.terms}<br><br>
+                                <strong>Historia postaci:</strong> ${app.charStory}<br><br>
+                                <strong>Cele postaci:</strong> ${app.charGoals}<br><br>
+                                <strong>Wady/Lęki:</strong> ${app.charFlaws}
+                            </div>
+                            <div style="text-align: right;">
+                                <button onclick="changeStatus('${app.id}', 'Zaakceptowane')" style="background: #4ade80; color: black; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: bold; margin-right: 10px;"><i class="fas fa-check"></i> Akceptuj</button>
+                                <button onclick="changeStatus('${app.id}', 'Odrzucone')" style="background: #f87171; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-weight: bold;"><i class="fas fa-times"></i> Odrzuć</button>
+                            </div>
+                        </div>
+                    `;
+                });
+            });
+        }
+
+        // ZMIANA STATUSU Z WYSKAKUJĄCYM OKIENKIEM (PROMPT) NA POWÓD
+        function changeStatus(id, newStatus) {
+            let reason = "";
+            
+            if (newStatus === 'Odrzucone') {
+                reason = prompt("Podaj powód odrzucenia podania (gracz dostanie tę informację w prywatnej wiadomości na Discordzie):");
+                if (reason === null) return; // Przerwanie akcji po kliknięciu "Anuluj"
+            } else {
+                if(!confirm(`Czy na pewno chcesz ZAAKCEPTOWAĆ to podanie?`)) return;
+            }
+
+            fetch(`/api/applications/${id}/status`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ status: newStatus, reason: reason })
+            }).then(() => loadApplications());
+        }
+
+        window.onload = () => {
+            fetch('/api/user').then(res => res.json()).then(data => {
+                if(data.loggedIn && document.referrer.includes('discord')) showWhitelistPage();
+            });
+        };
+    </script>
+</body>
+</html>
