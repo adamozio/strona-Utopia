@@ -171,7 +171,7 @@
     </div> 
     
     <div id="rules-view" style="display: none;">
-        
+
         <div class="rules-top-bar">
             <div class="container nav-flex">
                 <div class="rules-text-logo">Project Utopia</div>
@@ -181,34 +181,465 @@
             </div>
         </div>
 
-        <div class="container" style="min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 40px 20px;">
-            
-            <i class="fas fa-tools" style="font-size: 4rem; color: var(--primary); margin-bottom: 25px; animation: pulse 2s infinite;"></i>
-            <h2 style="font-size: 2.5rem; color: var(--text-white); margin-bottom: 15px;">Wkrótce</h2>
-            <p style="color: var(--text-gray); font-size: 1.1rem; max-width: 600px; line-height: 1.6;">
-                Nasz regulamin jest obecnie w trakcie gruntownej przebudowy, aby zapewnić jeszcze lepszą jakość rozgrywki.
-                <br>Nowa wersja pojawi się tutaj już niebawem!
-            </p>
-            <div style="margin-top: 40px;">
-                <button onclick="showMainPage()" class="btn-main">
-                    Wróć na stronę główną
-                </button>
+        <div class="container" style="padding-top: 30px; padding-bottom: 60px;">
+
+            <!-- NAGŁÓWEK -->
+            <div style="text-align: center; margin-bottom: 35px;">
+                <h1 style="font-size: 2rem; font-weight: 900; color: var(--text-white); margin-bottom: 6px;">Regulamin <span class="highlight">Project Utopia</span></h1>
+                <p style="color: var(--text-gray); font-size: 0.85rem; margin-bottom: 14px;">Ostatnia aktualizacja: 13.03.2026</p>
+                <p style="color: var(--text-gray); font-size: 0.9rem; max-width: 680px; margin: 0 auto; line-height: 1.6;">Regulamin to zbiór zasad panujących na naszym serwerze. RolePlay jest wielowymiarowy i każda akcja RP potrafi zmieniać się dynamicznie. Wszystkie sytuacje potencjalnie łamiące regulamin będą rozpatrywane indywidualnie przez zespół Project Utopia.</p>
             </div>
 
-            <style>
-                @keyframes pulse {
-                    0% { transform: scale(1); opacity: 1; }
-                    50% { transform: scale(1.1); opacity: 0.8; }
-                    100% { transform: scale(1); opacity: 1; }
-                }
-            </style>
-        </div>
-        
-        <footer style="position: absolute; bottom: 0; width: 100%;">
+            <div class="rules-layout">
+
+                <!-- SIDEBAR -->
+                <aside class="rules-sidebar">
+                    <div class="sidebar-sticky">
+                        <h3>Spis treści</h3>
+                        <nav class="rules-nav">
+                            <a href="#" class="rules-link active" onclick="rulesNav(this,'rg1')">1. Zasady ogólne</a>
+                            <a href="#" class="rules-link" onclick="rulesNav(this,'rg2')">2. Podstawy serwera</a>
+                            <a href="#" class="rules-link" onclick="rulesNav(this,'rg3')">3. Życie i zdrowie</a>
+                            <a href="#" class="rules-link" onclick="rulesNav(this,'rg4')">4. Crime | Napady</a>
+                            <a href="#" class="rules-link" onclick="rulesNav(this,'rg5')">5. Pojazdy</a>
+                            <a href="#" class="rules-link" onclick="rulesNav(this,'rg6')">6. Limity</a>
+                            <a href="#" class="rules-link" onclick="rulesNav(this,'rg7')">7. Pojęcia</a>
+                        </nav>
+                    </div>
+                </aside>
+
+                <!-- TREŚĆ -->
+                <div class="rules-content-area">
+
+                    <!-- 1. ZASADY OGÓLNE -->
+                    <div class="rule-group" id="rg1">
+                        <div class="rule-header">
+                            <h2><i class="fas fa-gavel" style="color:var(--primary);margin-right:10px;font-size:1.1rem;"></i>1. Zasady ogólne</h2>
+                        </div>
+                        <div class="rule-list">
+                            <div class="rule-row">
+                                <div class="rule-number">1.1</div>
+                                <div class="rule-text"><p>Każdy gracz jest zobowiązany do przestrzegania regulaminu.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">1.2</div>
+                                <div class="rule-text"><p>Zabrania się korzystania z nielegalnego oprogramowania, citizenów, skryptów, auto-clickerów, cheatów, exploitów, bugów oraz wszelkich modów lub modyfikacji (w tym modyfikacji celowników), które ułatwiają rozgrywkę, dają przewagę nad innymi graczami lub działają na ich szkodę.</p></div>
+                            </div>
+                            <div class="rule-row" style="margin-left:20px; border-left: 2px solid rgba(96,98,171,0.4);">
+                                <div class="rule-number">1.2.1</div>
+                                <div class="rule-text"><p>Zabrania się bugrollowania w jakiejkolwiek formie, w tym bugrolla podstawowego oraz brazylijskiego (bugroll w miejscu).</p></div>
+                            </div>
+                            <div class="rule-row" style="margin-left:20px; border-left: 2px solid rgba(96,98,171,0.4);">
+                                <div class="rule-number">1.2.2</div>
+                                <div class="rule-text"><p>Każdego rodzaju bugi należy niezwłocznie zgłaszać administracji przez Discord lub komendę /report. Wykorzystywanie bugów jest surowo zabronione.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">1.3</div>
+                                <div class="rule-text"><p>Nadużywanie słów zakazanych będzie traktowane jako trash talk.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">1.4</div>
+                                <div class="rule-text"><p>Każda osoba ma prawo zgłosić się do administracji w celu wyjaśnienia swojego bana do administratora +. Odwołanie możliwe jest tylko przez dostarczenie nagrania z własnej perspektywy potwierdzającego niewinność.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">1.5</div>
+                                <div class="rule-text"><p>Tylko administrator + ma prawo przerwać akcję RP.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">1.6</div>
+                                <div class="rule-text"><p>Przy zgłaszaniu gracza należy dostarczyć pełne nagranie z całej akcji w terminie maksymalnie 24 godzin od zdarzenia. Nagranie musi zawierać widoczną Z'tkę (ID) zgłaszanego gracza, timestampy momentów naruszenia oraz pełny dźwięk z gry i mikrofonu. Zgłoszenia niespełniające wymagań będą natychmiastowo odrzucane.</p></div>
+                            </div>
+                            <div class="rule-row" style="border-left: 2px solid rgba(239,68,68,0.5);">
+                                <div class="rule-number" style="color:#ef4444;">1.7</div>
+                                <div class="rule-text"><p>Odgrywanie scen seksualnych na serwerze jest całkowicie zakazane.</p></div>
+                            </div>
+                            <div class="rule-row" style="margin-left:20px; border-left: 2px solid rgba(239,68,68,0.5);">
+                                <div class="rule-number" style="color:#ef4444;">1.7.1</div>
+                                <div class="rule-text"><p>Zakazane jest odgrywanie gwałtu, jakiekolwiek nawiązywanie do niego czy wymuszanie zachowań seksualnych wobec postaci innego gracza. Niestosowanie się wiązać się będzie z <strong style="color:#ef4444;">blokadą permanentną</strong>.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">1.8</div>
+                                <div class="rule-text"><p>Zakaz publikowania contentu AI, który mógłby wprowadzić kogokolwiek w błąd. Wyjątkiem jest tworzenie kontentu kreatywnego, np. reklamy biznesów, graficzne menu restauracji itp.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">1.9</div>
+                                <div class="rule-text"><p>Każdy gracz jest zobowiązany do posiadania takiego samego nicku na Steam i Discord.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">1.10</div>
+                                <div class="rule-text"><p>Na serwerze obowiązuje zakaz używania trash-talku oraz meta-zwrotów, czyli wypowiedzi wykraczających poza immersję podczas rozgrywki. Przykład meta-zwrotu: <em>"Jak on stoi, przecież dostał w głowę?"</em><br><br>Jeśli nie masz pewności, czy coś jest dozwolone — zapytaj administracji.</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. PODSTAWY SERWERA -->
+                    <div class="rule-group" id="rg2">
+                        <div class="rule-header">
+                            <h2><i class="fas fa-server" style="color:var(--primary);margin-right:10px;font-size:1.1rem;"></i>2. Podstawy serwera</h2>
+                        </div>
+                        <div class="rule-list">
+                            <div class="rule-row">
+                                <div class="rule-number">2.0</div>
+                                <div class="rule-text"><p>Do whitelisty możesz podejść, gdy Twój głos będzie po mutacji oraz będziesz miał ukończony 16 rok życia.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">2.1</div>
+                                <div class="rule-text"><p>Jeżeli w trakcie akcji RP dostałeś crasha, niezwłocznie poinformuj o tym na Discordzie na kanale #crashe.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">2.2</div>
+                                <div class="rule-text"><p>Jeżeli podczas akcji RP wystąpi reset serwera, należy wrócić do danej akcji po wejściu na serwer. Obowiązuje 10-minutowy immunitet przed rozpoczęciem agresywnej akcji dla każdej osoby wchodzącej po resecie. Wyjątkiem jest kontynuacja akcji sprzed zaćmienia.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">2.3</div>
+                                <div class="rule-text"><p>Używamy "Z" do zobaczenia ID gracza, gdy chcemy go zgłosić. Nie używamy jej bez konkretnej potrzeby.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">2.4</div>
+                                <div class="rule-text"><p>Zakaz przenoszenia informacji pochodzących ze źródła OOC do IC — metagaming.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">2.5</div>
+                                <div class="rule-text"><p>Zabrania się przesiadywania na komunikatorze głosowym podczas rozgrywki na serwerze.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">2.6</div>
+                                <div class="rule-text">
+                                    <strong>Narracja — komendy</strong>
+                                    <p style="margin-top:8px;"><code style="background:rgba(96,98,171,0.15);padding:2px 6px;border-radius:3px;color:var(--primary);">/me</code> &nbsp;— opisuje czynności wykonywane przez naszą postać<br>
+                                    <code style="background:rgba(96,98,171,0.15);padding:2px 6px;border-radius:3px;color:var(--primary);">/do</code> &nbsp;— opisuje stan otoczenia i postaci; nie wolno kłamać używając tej komendy<br>
+                                    <code style="background:rgba(96,98,171,0.15);padding:2px 6px;border-radius:3px;color:var(--primary);">/if</code> &nbsp;— losowy wybór narracji np. <em>/if otwiera drzwi</em><br>
+                                    <code style="background:rgba(96,98,171,0.15);padding:2px 6px;border-radius:3px;color:var(--primary);">/opis</code> &nbsp;— stale widoczna informacja o postaci<br>
+                                    <code style="background:rgba(96,98,171,0.15);padding:2px 6px;border-radius:3px;color:var(--primary);">/opis2</code> — odgrywanie przedmiotów niemożliwych do postawienia w grze; usuwasz przez <code style="background:rgba(96,98,171,0.15);padding:2px 6px;border-radius:3px;color:var(--primary);">/opis2usun</code></p>
+                                </div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">2.7</div>
+                                <div class="rule-text">
+                                    <strong>Komendy dla graczy</strong>
+                                    <p style="margin-top:8px;"><code style="background:rgba(96,98,171,0.15);padding:2px 6px;border-radius:3px;color:var(--primary);">/zglos</code> — zgłaszanie błędów do administracji<br>
+                                    <code style="background:rgba(96,98,171,0.15);padding:2px 6px;border-radius:3px;color:var(--primary);">local OOC</code> — poinformowanie o problemie technicznym graczy w pobliżu<br>
+                                    <code style="background:rgba(96,98,171,0.15);padding:2px 6px;border-radius:3px;color:var(--primary);">/globaldo</code> — obejmuje cały serwer; każde nieodpowiednie użycie karane UNWL</p>
+                                </div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">2.8</div>
+                                <div class="rule-text">
+                                    <strong>Greenzone — strefa wolna od agresywnych akcji</strong>
+                                    <p style="margin-top:6px;">Nie można z tego miejsca porywać ani inicjować BW. Zasada nie obowiązuje w trakcie trwającej akcji RP.<br>Do zielonych stref należą: <span style="color:var(--primary);">komendy, szpitale, DOJ, więzienie</span>.</p>
+                                </div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">2.9</div>
+                                <div class="rule-text"><p>Zakazuje się agresywnych akcji RP na terenie miasta bez odpowiedniego i rozbudowanego podłoża fabularnego. Chęć pozyskania zakładnika do napadu lub reakcja na wyzwiska nie stanowią wystarczającego powodu.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">2.10</div>
+                                <div class="rule-text"><p>Nie ma obowiązku odgrywania na komendach narracyjnych zakuwania oraz przeszukania. Wystarczy odegrać to głosowo.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">2.11</div>
+                                <div class="rule-text"><p>Dowód osobisty ma się zawsze przy sobie.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">2.12</div>
+                                <div class="rule-text"><p>Aby uniknąć identyfikacji, gracz powinien maskować swoją twarz, modulować głos oraz zmienić kolor pojazdu lub ubrania.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">2.13</div>
+                                <div class="rule-text"><p>Przed oddaniem strzału gracz musi dokonać inicjacji werbalnej przy użyciu czatu głosowego, aby każda ze stron słyszała ową inicjację.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">2.14</div>
+                                <div class="rule-text"><p>Zarejestrowane organizacje przestępcze oraz LSPD mają przywilej inicjacji grupowej.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">2.15</div>
+                                <div class="rule-text"><p>EMT, LSPD oraz DOJ muszą mieć zgodę na przejawy korupcji od administratora.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">2.16</div>
+                                <div class="rule-text"><p>W przypadku użycia komendy /globaldo, jeżeli adresat nie udzieli odpowiedzi w ciągu 10 minut, osoba inicjująca ma prawo samodzielnie rozstrzygnąć wynik przez <code style="background:rgba(96,98,171,0.15);padding:2px 6px;border-radius:3px;color:var(--primary);">/if</code>.</p></div>
+                            </div>
+                            <div class="rule-row" style="border-left: 2px solid rgba(239,68,68,0.5);">
+                                <div class="rule-number" style="color:#ef4444;">2.17</div>
+                                <div class="rule-text"><p>Na serwerze jest kategoryczny zakaz jakichkolwiek przejawów nienawiści, seksualnych itp. z udziałem zwierząt.</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. ŻYCIE I ZDROWIE -->
+                    <div class="rule-group" id="rg3">
+                        <div class="rule-header">
+                            <h2><i class="fas fa-heartbeat" style="color:var(--primary);margin-right:10px;font-size:1.1rem;"></i>3. Życie i zdrowie</h2>
+                        </div>
+                        <div class="rule-list">
+                            <div class="rule-row">
+                                <div class="rule-number">3.1</div>
+                                <div class="rule-text"><p>Nigdy nie zapominasz o zdarzeniach, które doprowadziły Cię do BW. Jeżeli napastnikowi zależy na niepamięci ofiary, odgrywa <code style="background:rgba(96,98,171,0.15);padding:2px 6px;border-radius:3px;color:var(--primary);">/do czy nie będzie o tym pamiętał?</code> do osoby nieprzytomnej, a ona odpowiada przez <code style="background:rgba(96,98,171,0.15);padding:2px 6px;border-radius:3px;color:var(--primary);">/if będzie pamiętał</code>. Zielone = pamięta, czerwone = nie pamięta.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">3.2</div>
+                                <div class="rule-text"><p>Podczas stanu BW możesz odgrywać sytuację na komendach narracyjnych i voice chacie, odgrywając ból. Zakazuje się podawania pozycji napastników, must win'u oraz trash talku.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">3.3</div>
+                                <div class="rule-text"><p>Postrzał w kamizelkę możemy odegrać tylko i wyłącznie w przypadku, gdy posiadamy ją jako przedmiot.</p></div>
+                            </div>
+                            <div class="rule-row" style="border-left: 2px solid rgba(239,68,68,0.5);">
+                                <div class="rule-number" style="color:#ef4444;">3.4</div>
+                                <div class="rule-text"><p>Na CK swojej postaci musisz napisać ticket — może na to zgodzić się tylko administrator.</p></div>
+                            </div>
+                            <div class="rule-row" style="margin-left:20px; border-left: 2px solid rgba(239,68,68,0.5);">
+                                <div class="rule-number" style="color:#ef4444;">3.4.1</div>
+                                <div class="rule-text"><p>Prośbę o uśmiercenie postaci innemu graczowi możesz złożyć przez ticket na Discordzie (crime) — musi mieć konkretne podłoże RolePlay.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">3.5</div>
+                                <div class="rule-text"><p>Cały majątek osób ubiegających się o CK lub zbanowanych permanentnie przepada. Wyjątkiem jest testament złożony wcześniej i zaakceptowany przez DOJ oraz administrację.</p></div>
+                            </div>
+                            <div class="rule-row" style="margin-left:20px; border-left: 2px solid rgba(96,98,171,0.4);">
+                                <div class="rule-number">3.5.1</div>
+                                <div class="rule-text"><p>Zabronione jest przenoszenie samochodów, pieniędzy oraz przedmiotów z postaci A na postać B.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">3.6</div>
+                                <div class="rule-text"><p>Możliwość odgrywania obrażeń trwałych na drugim graczu, lecz za zgodą tej osoby.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">3.7</div>
+                                <div class="rule-text">
+                                    <strong>Poddawanie innych osób</strong>
+                                    <p style="margin-top:6px;">Możliwe wyłącznie przy posiadaniu co najmniej broni białej oraz poprawnym odegraniu akcji na komendach narracyjnych.<br><br>
+                                    Przykład: <code style="background:rgba(96,98,171,0.15);padding:2px 6px;border-radius:3px;color:var(--primary);">/me przykłada maczetę do szyi</code> → <code style="background:rgba(96,98,171,0.15);padding:2px 6px;border-radius:3px;color:var(--primary);">/do udane?</code> → <code style="background:rgba(96,98,171,0.15);padding:2px 6px;border-radius:3px;color:var(--primary);">/if udane</code></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. CRIME -->
+                    <div class="rule-group" id="rg4">
+                        <div class="rule-header">
+                            <h2><i class="fas fa-mask" style="color:var(--primary);margin-right:10px;font-size:1.1rem;"></i>4. Crime | Kradzież | Napady</h2>
+                        </div>
+                        <div class="rule-list">
+                            <div class="rule-row">
+                                <div class="rule-number">4.1</div>
+                                <div class="rule-text"><p>Dołączenie do trwającej akcji RP jako osoba lub grupa "na trzeciego" jest niezgodne z regulaminem.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">4.2</div>
+                                <div class="rule-text"><p>Podczas napadów masz prawo porwać tylu zakładników, ilu jest napastników.</p></div>
+                            </div>
+                            <div class="rule-row" style="margin-left:20px; border-left: 2px solid rgba(96,98,171,0.4);">
+                                <div class="rule-number">4.2.1</div>
+                                <div class="rule-text"><p>Podczas negocjacji obowiązuje: 1 żądanie = 1 zakładnik.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">4.3</div>
+                                <div class="rule-text"><p>Zabronione jest okradanie innych osób z kont bankowych.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">4.4</div>
+                                <div class="rule-text"><p>Zakazuje się przeszukiwania nieprzytomnych osób, gdy ich nie wprowadziliśmy do tego stanu. Wyjątkiem jest inicjacja zbiorowa.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">4.5</div>
+                                <div class="rule-text"><p>Zakazuje się używania masek oraz nakryć głowy, które zmieniają kształt lub objętość głowy podczas agresywnych akcji RP. Dotyczy to również kasków i hełmów kuloodpornych.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">4.6</div>
+                                <div class="rule-text"><p>Obywatel może samodzielnie uciec ze szpitala przed LSPD — zabrania się udziału osób trzecich w takiej ucieczce.</p></div>
+                            </div>
+                            <div class="rule-row" style="margin-left:20px; border-left: 2px solid rgba(96,98,171,0.4);">
+                                <div class="rule-number">4.6.1</div>
+                                <div class="rule-text"><p>Zabrania się odbijania osoby zatrzymanej podczas transportu ze szpitala na komendę.</p></div>
+                            </div>
+                            <div class="rule-row" style="margin-left:20px; border-left: 2px solid rgba(96,98,171,0.4);">
+                                <div class="rule-number">4.6.2</div>
+                                <div class="rule-text"><p>Osoby, które brały udział w odbiciu i zostały zatrzymane, nie mogą zostać ponownie odbite lub wymienione.</p></div>
+                            </div>
+                            <div class="rule-row" style="margin-left:20px; border-left: 2px solid rgba(96,98,171,0.4);">
+                                <div class="rule-number">4.6a</div>
+                                <div class="rule-text"><p>Odbijanie zatrzymanych dozwolone wyłącznie raz, podczas transportu z komendy do więzienia.</p></div>
+                            </div>
+                            <div class="rule-row" style="margin-left:20px; border-left: 2px solid rgba(96,98,171,0.4);">
+                                <div class="rule-number">4.6b</div>
+                                <div class="rule-text"><p>Crime po zakończeniu napadu ma obowiązek odczekania 5 minut przed odjazdem z miejsca napadu.</p></div>
+                            </div>
+                            <div class="rule-row" style="margin-left:20px; border-left: 2px solid rgba(96,98,171,0.4);">
+                                <div class="rule-number">4.6c</div>
+                                <div class="rule-text"><p>Gdy dwie ekipy prowadzą agresywną akcję, policja może wjechać na trzeciego po wcześniejszym upomnieniu o zakończeniu konfliktu.</p></div>
+                            </div>
+                            <div class="rule-row" style="margin-left:20px; border-left: 2px solid rgba(239,68,68,0.5);">
+                                <div class="rule-number" style="color:#ef4444;">4.6d</div>
+                                <div class="rule-text"><p>Wjazd na napad na Jubilera oraz Bank Roxwood możliwy wyłącznie gdy posiadacie wymagane itemy i na miejscu nie ma LSPD. Na pozostałe napady obowiązuje <strong style="color:#ef4444;">kategoryczny zakaz wjazdu</strong>.</p></div>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number">4.7</div>
+                                <div class="rule-text"><p>Zakazuje się bezpodstawnego lootowania policji wyłącznie w celu zabrania przedmiotów — traktowane jako LootRP.</p></div>
+                            </div>
+                            <div class="rule-row" style="border-left: 2px solid rgba(239,68,68,0.5);">
+                                <div class="rule-number" style="color:#ef4444;">4.8</div>
+                                <div class="rule-text"><p><strong style="color:var(--text-white);">Nakaz nagrywania każdej agresywnej akcji.</strong> Nagranie: minimum 720p 30fps, pełna akcja od początku do końca, dźwięk z gry i mikrofonu, archiwizowane minimum 48h.<br><span style="color:#ef4444;">Brak nagrania = bany kolejno: 7, 14, 30 dni oraz PERM.</span></p></div>
+                            </div>
+                            <div class="rule-row" style="border-left: 2px solid rgba(239,68,68,0.5);">
+                                <div class="rule-number" style="color:#ef4444;">4.9</div>
+                                <div class="rule-text">
+                                    <strong style="color:var(--text-white);">CAŁKOWITY ZAKAZ</strong> <span style="color:#a0a0a0;">stosowania tower defensów, bronienia się lub prowadzenia strzelanin w lokalizacjach:</span>
+                                    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:6px;margin-top:10px;">
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>Metro (całe)</span>
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>Maze Bank Arena</span>
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>Złomowisko (Roger's)</span>
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>Szwalnia (środek)</span>
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>Parking Jaguarowy</span>
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>Parking Szklany</span>
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>Parking Arcade</span>
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>Kurczakownia Paleto</span>
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>Hotel przy Eclipsie</span>
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>Skybar</span>
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>Hotel przy szklanym parkingu</span>
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>Union Depository</span>
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>Huta</span>
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>Rzeźnia w mieście</span>
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>Benny's</span>
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>Lotnisko</span>
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>HumanLabs</span>
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>Arcadius</span>
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>Czerwony parking</span>
+                                        <span style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:5px;padding:5px 10px;font-size:0.82rem;color:#f87171;"><i class="fas fa-ban" style="margin-right:5px;font-size:0.7rem;"></i>Tunel Sandy–Los Santos</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="rule-row" style="margin-left:20px; border-left: 2px solid rgba(96,98,171,0.4);">
+                                <div class="rule-number">4.9.1</div>
+                                <div class="rule-text"><strong>Limity lootowania PD po wygranej akcji Crime</strong><p style="margin-top:6px;">1 osoba — zakaz lootowania &nbsp;|&nbsp; 2 osoby — max 3 PD &nbsp;|&nbsp; 3 osoby — max 4 PD &nbsp;|&nbsp; 4 osoby — max 5 PD &nbsp;|&nbsp; 5 osób — wszyscy FP biorący udział w akcji</p></div>
+                            </div>
+                            <div class="rule-row" style="margin-left:20px; border-left: 2px solid rgba(96,98,171,0.4);">
+                                <div class="rule-number">4.9.2</div>
+                                <div class="rule-text"><p>Lootowanie w trakcie trwającej strzelaniny dozwolone wyłącznie w celu zdobycia amunicji oraz kamizelki.</p></div>
+                            </div>
+                            <div class="rule-row" style="margin-left:20px; border-left: 2px solid rgba(96,98,171,0.4);">
+                                <div class="rule-number">4.9.3</div>
+                                <div class="rule-text"><p>Strzelanina uznawana jest za rozpoczętą w momencie oddania pierwszego strzału. Funkcjonariusz używa <code style="background:rgba(96,98,171,0.15);padding:2px 6px;border-radius:3px;color:var(--primary);">./k</code> (komunikat na dispatchu + oznaczenie na mapie). Po 15 min możliwe dołączenie kolejnego limitu PD; po 30 min brak limitu. Zakończenie przez <code style="background:rgba(96,98,171,0.15);padding:2px 6px;border-radius:3px;color:var(--primary);">./h</code>.</p></div>
+                            </div>
+                            <div class="rule-row" style="margin-left:20px; border-left: 2px solid rgba(96,98,171,0.4);">
+                                <div class="rule-number">4.9.4</div>
+                                <div class="rule-text"><p>Zakazuje się nadużywania ciągle tych samych miejsc przez te same ekipy. Miejsca powinny być zmieniane dla różnorodności rozgrywki.</p></div>
+                            </div>
+                            <div class="rule-row" style="border-left: 2px solid rgba(239,68,68,0.5);">
+                                <div class="rule-number" style="color:#ef4444;">4.10</div>
+                                <div class="rule-text"><p>Zakazuje się porywania funkcjonariuszy LSPD (również w stanie BW) w celu przeprowadzania wymian.</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. POJAZDY -->
+                    <div class="rule-group" id="rg5">
+                        <div class="rule-header">
+                            <h2><i class="fas fa-car" style="color:var(--primary);margin-right:10px;font-size:1.1rem;"></i>5. Pojazdy</h2>
+                        </div>
+                        <div class="rule-list">
+                            <div class="rule-row">
+                                <div class="rule-number">5.0</div>
+                                <div class="rule-text"><p>Zakaz jazdy po nierealistycznych terenach: 90-stopniowe góry, skały, bagna. Przykład: podczas pościgu napastnicy wjeżdżają sportowym samochodem pod stromą górę bez problemu.</p></div>
+                            </div>
+                            <div class="rule-row" style="border-left: 2px solid rgba(239,68,68,0.5);">
+                                <div class="rule-number" style="color:#ef4444;">5.1</div>
+                                <div class="rule-text"><p>Kategorycznie zabrania się okradania samochodów z części.</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. LIMITY -->
+                    <div class="rule-group" id="rg6">
+                        <div class="rule-header">
+                            <h2><i class="fas fa-users" style="color:var(--primary);margin-right:10px;font-size:1.1rem;"></i>6. Limity</h2>
+                        </div>
+                        <div class="rule-list">
+                            <div class="rule-row" style="display:block; padding:0; overflow:hidden;">
+                                <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+                                    <thead>
+                                        <tr style="background:rgba(96,98,171,0.12);">
+                                            <th style="padding:10px 15px;text-align:left;color:var(--primary);font-weight:600;border-bottom:1px solid rgba(96,98,171,0.25);">Rodzaj akcji</th>
+                                            <th style="padding:10px 15px;text-align:center;color:var(--primary);font-weight:600;border-bottom:1px solid rgba(96,98,171,0.25);">Crime</th>
+                                            <th style="padding:10px 15px;text-align:center;color:var(--primary);font-weight:600;border-bottom:1px solid rgba(96,98,171,0.25);">LSPD / Oponent</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);"><td style="padding:9px 15px;color:#d1d1d1;">Crime vs Crime</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">6</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">6</td></tr>
+                                        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.01);"><td style="padding:9px 15px;color:#d1d1d1;">Crime vs LSPD</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">6</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">9</td></tr>
+                                        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);"><td style="padding:9px 15px;color:#d1d1d1;">Sejf / Kasetka</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">2</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">4</td></tr>
+                                        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.01);"><td style="padding:9px 15px;color:#d1d1d1;">Crime vs Crime — Groby</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">2</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">2</td></tr>
+                                        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);"><td style="padding:9px 15px;color:#d1d1d1;">Boosting klasy poniżej A</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">2</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">4</td></tr>
+                                        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.01);"><td style="padding:9px 15px;color:#d1d1d1;">Boosting klasy A i wyżej</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">6</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">9</td></tr>
+                                        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);"><td style="padding:9px 15px;color:#d1d1d1;">Tracker</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">2</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">4</td></tr>
+                                        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.01);"><td style="padding:9px 15px;color:#d1d1d1;">Sprzedaż narkotyków (C vs C)</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">2</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">2</td></tr>
+                                        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);"><td style="padding:9px 15px;color:#d1d1d1;">Sprzedaż narkotyków (C vs PD)</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">2</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">4</td></tr>
+                                        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.01);"><td style="padding:9px 15px;color:#d1d1d1;">Napad na wysypisko</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">6</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">9</td></tr>
+                                        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);"><td style="padding:9px 15px;color:#d1d1d1;">Bank Roxwood (C vs PD)</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">6</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">9</td></tr>
+                                        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.01);"><td style="padding:9px 15px;color:#d1d1d1;">Bank Roxwood (C vs C)</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">6</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">6</td></tr>
+                                        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);"><td style="padding:9px 15px;color:#d1d1d1;">Napad na aptekę</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">4</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">6</td></tr>
+                                        <tr style="border-bottom:1px solid rgba(255,255,255,0.04);background:rgba(255,255,255,0.01);"><td style="padding:9px 15px;color:#d1d1d1;">Napad na stary warsztat</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">4</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">6</td></tr>
+                                        <tr><td style="padding:9px 15px;color:#d1d1d1;">Napad na ammunation</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">3</td><td style="padding:9px 15px;text-align:center;color:var(--primary);font-weight:600;">6</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="rule-row">
+                                <div class="rule-number" style="min-width:10px;"></div>
+                                <div class="rule-text"><p>Jedna osoba ze strony Crime może dodatkowo brać udział jako trzecia strona wyłącznie w celu wykonania zastawki — nie może agresywnie uczestniczyć w akcji.</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. POJĘCIA -->
+                    <div class="rule-group" id="rg7">
+                        <div class="rule-header">
+                            <h2><i class="fas fa-book" style="color:var(--primary);margin-right:10px;font-size:1.1rem;"></i>7. Pojęcia</h2>
+                        </div>
+                        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:8px;">
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">IC (In Character)</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Świat, w którym żyje nasza postać — kontent dotyczący bezpośrednio rozgrywki.</div></div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">OOC (Out Of Character)</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Świat, w którym żyjemy my — wszystko niezwiązane z rozgrywką.</div></div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">MG (Metagaming)</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Wykorzystywanie informacji OOC w IC.</div></div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">PG (Power Gaming)</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Zmuszanie kogoś do akcji RP.</div></div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">BW (Brutally Wounded)</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Wprowadzenie postaci w stan nieprzytomności wskutek odniesionych obrażeń.</div></div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">VDM (Vehicle Deathmatch)</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Rozjeżdżanie przypadkowych osób prowadzące do BW.</div></div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">RDM (Random Deathmatch)</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Strzelanie do przypadkowych osób prowadzące do BW.</div></div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">CK (Character Kill)</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Permanentne uśmiercenie postaci.</div></div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">FCK (Forced Character Kill)</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Wymuszone uśmiercenie postaci przez osobę inną niż właściciel.</div></div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">CN (Celebrity Name)</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Imię i nazwisko postaci na podstawie imienia znanej osoby.</div></div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">NJ (Ninja Jacking)</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Wyrzucenie kierowcy z pojazdu bez poprawnego odegrania akcji RP.</div></div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">BH (Bunny Hop)</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Bugowanie animacji skakania w celu szybszego przemieszczania się.</div></div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">CB (Cop Baiting)</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Prowokowanie policji bez większego celu.</div></div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">CL (Combatlog)</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Wyjście z gry podczas akcji RP, np. ALT+F4 w czasie pościgu.</div></div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">RK (Revenge Kill)</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Nieuzasadniona zemsta po wyjściu ze szpitala na graczu, który doprowadził do BW.</div></div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">Zasada Szanowania Życia</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Szacunek do życia swojej postaci i nienarażanie jej na sytuacje zagrożenia bez powodu.</div></div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">Fail RP</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Błędne odegranie akcji RP — wychodzenie z postaci.</div></div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">Fail Driving</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Jazda pojazdem niemożliwa w prawdziwym życiu.</div></div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">LootRP</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Zabieranie przedmiotów bez uzasadnionego powodu.</div></div>
+                            <div style="background:var(--bg-card);border:1px solid rgba(255,255,255,0.04);border-radius:6px;padding:12px 15px;"><div style="font-weight:700;color:var(--primary);font-size:0.9rem;margin-bottom:3px;">Inicjacja grupowa</div><div style="font-size:0.83rem;color:var(--text-gray);line-height:1.5;">Jedna osoba z frakcji może zainicjować spór angażując całą zarejestrowaną grupę.</div></div>
+                        </div>
+                    </div>
+
+                </div><!-- /rules-content-area -->
+            </div><!-- /rules-layout -->
+        </div><!-- /container -->
+
+        <footer>
             <div class="container footer-content">
                 <p>&copy; 2026 Project Utopia. Wszelkie prawa zastrzeżone.</p>
             </div>
         </footer>
+
+        <script>
+            function rulesNav(el, targetId) {
+                event.preventDefault();
+                document.querySelectorAll('.rules-link').forEach(a => a.classList.remove('active'));
+                el.classList.add('active');
+                const target = document.getElementById(targetId);
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            }
+        </script>
     </div>
 
     <div id="whitelist-view" style="display: none; padding-top: 100px;">
