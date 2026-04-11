@@ -1,24 +1,34 @@
-name: Deploy na EC2
+name: Deploy to EC2
 
-  on:
-    push:
-      branches: [main]
+on:
+  push:
+    branches:
+      - main
 
-  jobs:
-    deploy:
-      runs-on: ubuntu-latest
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-      steps:
-        - name: Checkout kodu
-          uses: actions/checkout@v4
+      - name: Copy files to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_KEY }}
+          source: "www/index.html,www/style.css,www/server.js"
+          target: /var/www/utopia
+          strip_components: 1
 
-        - name: Deploy na EC2 przez SSH
-          uses: appleboy/ssh-action@v1.0.3
-          with:
-            host: ${{ secrets.EC2_HOST }}
-            username: ${{ secrets.EC2_USER }}
-            key: ${{ secrets.EC2_SSH_KEY }}
-            script: |
-              cd /var/www/html
-              git pull origin main
-              sudo systemctl reload nginx
+      - name: Restart service
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_KEY }}
+          script: |
+            cd /var/www/utopia
+            npm install --production
+            sudo systemctl restart utopia
